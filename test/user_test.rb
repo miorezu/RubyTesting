@@ -1,3 +1,4 @@
+require 'minitest/autorun'
 require_relative '../user'
 
 class UserTest < Minitest::Test
