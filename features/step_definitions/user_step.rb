@@ -1,10 +1,4 @@
-class User
-  attr_accessor :name
-
-  def initialize(name)
-    @name = name
-  end
-end
+require_relative '../../user'
 
 Given('I have a user with the name {string}') do |name|
   @user = User.new(name)
@@ -16,6 +10,7 @@ end
 
 When('I change the user name to {string}') do |new_name|
   @user.name = new_name
+  @name = @user.name
 end
 
 Then('I should see the name {string}') do |expected_name|
